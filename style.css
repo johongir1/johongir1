@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+
+}
+ul{
+    padding-left: 0;
+}
+.box{
+    gap: 50px;
+    position: absolute;
+    top: 50px;
+    padding: 10px;
+    background: rgb(149, 139, 139);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: -10;
+}
+/* .item:hover .box{
+} */
+#check:checked ~ .box{
+    opacity: 1;
+    z-index: 100;
+
+}
+.link{
+    font-size: 18px;
+    text-transform: uppercase;
+    display: block;
+    padding: 10px;
+}
+.nav-pills .nav-link{
+    opacity: 0.55;
+}
+.nav-pills .nav-link.active{
+    opacity: 1;
+    background: transparent;
+}
+/* .item{
+    border: 1px solid blue;
+    height: 300px;
+    font-size: 50px;
+} */
+/* .col-3{
+    width: calc(100%/12*3);
+    padding: 0 15px;
+} */
+.dropdown-toggle{
+    display: flex;
+    align-items: center;
+}
+.dropdown-toggle::after{
+    border: none;
+    content: '\f077';
+    background-image: none;
+    font-family: "Font Awesome 5 Pro";
+    transition: 0.3s;
+}
+.dropdown-toggle.show::after{
+    transform: rotate(180deg);
+}
